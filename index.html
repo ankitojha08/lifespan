@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ---------CSS----------------- -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- ---------------favicon---------------->
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+
+    <!-- ----------FONTS------------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@400;700&family=Sacramento&display=swap"
+        rel="stylesheet">
+
+    <!-- -------------FONTAWESOME------------------------>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/cd89500863.js" crossorigin="anonymous"></script>
+
+    <title>Lifespan</title>
+</head>
+
+<body>
+    <div class="whole" style="text-align: center;">
+
+
+        <h1>WATCH<br>YOUR<br>LIFESPAN</h1>
+        <h3>was born on :</h3>
+        <input type="date" id="date">
+
+
+
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>based on article <a href="https://waitbutwhy.com/2014/05/life-weeks.html" target="_blank">LIFE IN WEEKS</a></p>
+                </div>
+
+
+                <div class="creator">
+                    <div class="footer-right">
+                        <p>say 'HI' to the creator :</p>
+                    </div>
+                    <div class="icons">
+                        <a href="https://github.com/ankitojha08" target="_blank"><i class="fab fa-github-square fa-2x"></i></a>
+                        <a href="https://twitter.com/ankitojha08" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a>
+                        <a href="mailto: ankitojha777@gmail.com" target="_blank"><i class="fas fa-envelope-square fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.querySelector("#date").addEventListener("keyup", function(e) {
+            if (e.key === 'Enter') {
+                window.location = '' + 'years' + '.html';
+            }
+        });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
