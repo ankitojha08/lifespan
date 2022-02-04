@@ -57,10 +57,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 
 input[type=date],
-input[type=text] {
+input[type=text],
+.go {
     border: none;
     background-color: #2E2E30;
-    border-radius: 8px;
+    border-radius: 5px;
     width: 350px;
     height: 50px;
     font-family: 'Quicksand', sans-serif;
@@ -68,6 +69,32 @@ input[type=text] {
     text-align: center;
     font-size: 18px;
     font-style: italic;
+}
+
+.go {
+    width: 4%;
+    color: white;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.go:hover,
+.go-page:hover {
+    color: rgb(190, 190, 190);
+}
+
+.go-page {
+    font-family: 'Quicksand', sans-serif;
+    border: none;
+    background-color: #2E2E30;
+    border-radius: 5px;
+    height: 35px;
+    width: 5%;
+    color: white;
+    font-style: normal;
+    cursor: pointer;
+    padding: 2px 6px 0 6px;
+    margin-left: 4px;
 }
 
 .footer {
@@ -242,16 +269,11 @@ div {
 
 @media(max-width: 450px) {
     h1 {
-        font-size: 40px;
+        font-size: 37px;
         padding-top: 30px;
     }
     h3 {
         font-size: 1.5625rem;
-    }
-    input[type=date],
-    input[type=text] {
-        width: 200px;
-        height: 40px;
     }
     .footer-content {
         font-size: 0.5rem;
@@ -286,7 +308,9 @@ div {
     }
     input[type=date],
     input[type=text] {
-        width: 22% !important;
+        height: 40px;
+        width: 52% !important;
+        margin-left: 0 !important;
     }
     .footer-content {
         padding-right: 0;
@@ -324,5 +348,9 @@ div {
     .mobile {
         display: block;
         font-size: 12px;
+    }
+    .go-page {
+        width: 20%;
+        padding-left: 1px;
     }
 }

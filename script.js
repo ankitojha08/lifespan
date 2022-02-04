@@ -10,7 +10,6 @@ document.querySelector("#date").addEventListener('input', function() {
 });
 
 
-
 // calls the function "difference" to when pressed enter
 document.querySelector("#date").addEventListener("keyup", function(e) {
     if (e.key === 'Enter') {
@@ -18,11 +17,16 @@ document.querySelector("#date").addEventListener("keyup", function(e) {
     }
 });
 
+document.querySelector(".go-page").addEventListener("click", function() {
+    window.location.reload(true);
+    difference(date);
+});
+
 
 
 // function to call difference between dates 
 function difference(date) {
-
+    console.log("difference");
     diff = currentDate.getTime() - date.getTime();
 
     weeks = Math.round(diff / (1000 * 60 * 60 * 24 * 7));
@@ -55,23 +59,28 @@ function setDateValue(weeks, months, years, date) {
 // loads value(date) to use them
 function loadDateValue() {
     var DOB = JSON.parse(localStorage.getItem('DOB'));
-    colorboxes(0, 0, 0);
     colorboxes(DOB.week, DOB.month, DOB.year);
 }
-loadDateValue();
 
+loadDateValue();
 
 
 // function to colour the boxes
 function colorboxes(weeks, months, years) {
-
+    console.log(weeks + " ::: " + months + " ::: " + years);
+    // alert("colorboxes");
     var weekLi = document.querySelectorAll("#weeks li");
     var monthLi = document.querySelectorAll("#months li");
     var yearLi = document.querySelectorAll("#years li");
 
 
-    for (var j = 0; j < weeks && j < weekLi.length; j++) {
-        weekLi[j].style.backgroundColor = color;
+    var weekcolor = async() => {
+        for (var j = 0; j < weeks && j < weekLi.length; j++) {
+            if (j % 4 == 0) {
+                await new Promise(r => setTimeout(r, 20));
+            }
+            weekLi[j].style.backgroundColor = color;
+        }
     }
 
     var monthcolor = async() => {
@@ -87,7 +96,7 @@ function colorboxes(weeks, months, years) {
             yearLi[j].style.backgroundColor = color;
         }
     }
-
+    weekcolor();
     yearcolor();
     monthcolor();
 

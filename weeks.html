@@ -44,6 +44,7 @@
         input[type=date],
         input[type=text] {
             margin: 15px;
+            margin-right: 0;
         }
     </style>
 
@@ -54,7 +55,10 @@
         <div class="date-n-title">
 
             <h1 class="weekh1">LIFESPAN</h1>
-            <input type="text" id="date" placeholder="" onfocus="(this.type='date')">
+            <div style="margin: 0; text-align: center;">
+                <input type="text" id="date" placeholder="" onfocus="(this.type='date')">
+                <button class="go-page">Go</button>
+            </div>
 
             <!-- to make the elements left and between -->
             <div style="margin: 0; width: 10%;" class="top-right"></div>

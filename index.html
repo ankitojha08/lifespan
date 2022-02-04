@@ -9,10 +9,10 @@
     <!-- ---------CSS----------------- -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- ---------------favicon---------------->
+    <!-- ---------favicon---------------->
     <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
 
-    <!-- ----------FONTS------------------ -->
+    <!-----------FONTS------------------ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@400;700&family=Sacramento&display=swap"
@@ -32,6 +32,7 @@
         <h1>WATCH<br>YOUR<br>LIFESPAN</h1>
         <h3>was born on :</h3>
         <input type="date" id="date">
+        <button class="go">Go</button>
 
 
 
@@ -62,6 +63,12 @@
             if (e.key === 'Enter') {
                 window.location = '' + 'years' + '.html';
             }
+        });
+
+        document.querySelector(".go").addEventListener("click", function() {
+            console.log("query selector");
+            window.location = '' + 'years' + '.html';
+            difference(date);
         });
     </script>
 
